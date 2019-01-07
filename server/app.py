@@ -16,7 +16,7 @@ app.config.from_object(__name__)
 # enable CORS
 CORS(app)
 
-BOOKS = [
+TODOS = [
     {
         'id': uuid.uuid4().hex,
         'todo': 'On the Road2',
@@ -44,61 +44,61 @@ def ping_pong():
     return jsonify('pong!')
 
 
-@app.route('/books', methods=['GET', 'POST'])
-def all_books():
+@app.route('/todos', methods=['GET', 'POST'])
+def all_todos():
     response_object = {'status': 'success'}
     if request.method == 'POST':
         post_data = request.get_json()
-        BOOKS.append({
+        TODOS.append({
             'id': uuid.uuid4().hex,
             'title': post_data.get('title'),
             'author': post_data.get('author'),
             'read': post_data.get('read'),
             'price': post_data.get('price')
         })
-        response_object['message'] = 'Book added!'
+        response_object['message'] = 'todos added!'
     else:
-        response_object['books'] = BOOKS
+        response_object['todos'] = TODOS
     return jsonify(response_object)
 
 
-@app.route('/books/<book_id>', methods=['GET', 'PUT', 'DELETE'])
-def single_book(book_id):
+@app.route('/todos/<todos_id>', methods=['GET', 'PUT', 'DELETE'])
+def single_todos(todos_id):
     response_object = {'status': 'success'}
     if request.method == 'GET':
         # TODO: refactor to a lambda and filter
-        return_book = ''
-        for book in BOOKS:
-            if book['id'] == book_id:
-                return_book = book
-        response_object['book'] = return_book
+        return_todos = ''
+        for todos in TODOS:
+            if todos['id'] == todos_id:
+                return_todos = todos
+        response_object['todos'] = return_todos
     if request.method == 'PUT':
         post_data = request.get_json()
-        remove_book(book_id)
-        BOOKS.append({
+        remove_todos(todos_id)
+        TODOS.append({
             'id': uuid.uuid4().hex,
             'title': post_data.get('title'),
             'author': post_data.get('author'),
             'read': post_data.get('read'),
             'price': post_data.get('price')
         })
-        response_object['message'] = 'Book updated!'
+        response_object['message'] = 'todos updated!'
     if request.method == 'DELETE':
-        remove_book(book_id)
-        response_object['message'] = 'Book removed!'
+        remove_todos(todos_id)
+        response_object['message'] = 'todos removed!'
     return jsonify(response_object)
 
 
 @app.route('/charge', methods=['POST'])
 def create_charge():
     post_data = request.get_json()
-    amount = round(float(post_data.get('book')['price']) * 100)
+    amount = round(float(post_data.get('todos')['price']) * 100)
     stripe.api_key = os.environ.get('STRIPE_SECRET_KEY')
     charge = stripe.Charge.create(
         amount=amount,
         currency='usd',
         card=post_data.get('token'),
-        description=post_data.get('book')['title']
+        description=post_data.get('todos')['title']
     )
     response_object = {
         'status': 'success',
@@ -117,10 +117,10 @@ def get_charge(charge_id):
     return jsonify(response_object), 200
 
 
-def remove_book(book_id):
-    for book in BOOKS:
-        if book['id'] == book_id:
-            BOOKS.remove(book)
+def remove_todos(todos_id):
+    for todos in TODOS:
+        if todos['id'] == todos_id:
+            TODOS.remove(todos)
             return True
     return False
 
