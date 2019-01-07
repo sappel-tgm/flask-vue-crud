@@ -27,3 +27,7 @@ Simple Client erstellen, Flask-Python
 
 
 ### Teil 2
+#### Welche Tools würden Sie einsetzen, und wie würden die entsprechenden Konfigurationsdateien aussehen? Erstellen Sie ein Konzept!
+Cypress:  grafische Tests
+Travis: -> yml -> language: python  
+Py-Tests:  um Code zu testen
