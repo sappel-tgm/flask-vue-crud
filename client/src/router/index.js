@@ -11,8 +11,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Books',
-      component: Books,
+      name: 'Todos',
+      component: Todos,
     },
     {
       path: '/order/:id',
