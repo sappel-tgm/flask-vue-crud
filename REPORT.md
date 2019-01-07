@@ -12,6 +12,7 @@ CRUD Implementieren, Methoden erstellen
 #### Ermöglichen Sie die einfache Erweiterung der grafischen Oberfläche und beschreiben Sie notwendige Schritte um neue Komponenten zur Anmeldung oder persönlichen Definition von personenbezogenen TODOs zu ermöglichen.
 Erweiterung von Vue, change der Routes in js  
 Neue Komponenten durch components in der View
+Routes 2x Änderung + (!ID)
 
 #### Wie würden Sie eine einfache Authentifizierung implementieren? Beschreiben Sie die notwendigen Schritte!
 Authentifizierung einerseits mit Flask: Flask-HTTPAuth, Token Based Authentication  
