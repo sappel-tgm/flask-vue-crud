@@ -31,4 +31,7 @@ Simple Client erstellen, Flask-Python
 #### Welche Tools würden Sie einsetzen, und wie würden die entsprechenden Konfigurationsdateien aussehen? Erstellen Sie ein Konzept!
 Cypress:  grafische Tests
 Travis: -> yml -> language: python  
-Py-Tests:  um Code zu testen
+Py-Tests:  um Code zu testen  
+#### Bereiten Sie einen einfachen Test für den Aufruf der Random Funktion vor. Wie würden Sie diesen starten?
+@pytest.fixture  
+random Number test - pytest - asserts + setup/teardown
