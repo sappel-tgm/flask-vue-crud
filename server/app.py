@@ -19,24 +19,21 @@ CORS(app)
 BOOKS = [
     {
         'id': uuid.uuid4().hex,
-        'title': 'On the Road',
-        'author': 'Jack Kerouac',
-        'read': True,
-        'price': '19.99'
+        'todo': 'On the Road2',
+        'assignee': 'Jack Kerouac2',
+        'done': True
     },
     {
         'id': uuid.uuid4().hex,
-        'title': 'Harry Potter and the Philosopher\'s Stone',
-        'author': 'J. K. Rowling',
-        'read': False,
-        'price': '9.99'
+        'todo': 'On the Road3',
+        'assignee': 'Jack Kerouac3',
+        'done': False
     },
     {
         'id': uuid.uuid4().hex,
-        'title': 'Green Eggs and Ham',
-        'author': 'Dr. Seuss',
-        'read': True,
-        'price': '3.99'
+        'todo': 'On the Road4',
+        'assignee': 'Jack Kerouac4',
+        'done': True
     }
 ]
 
