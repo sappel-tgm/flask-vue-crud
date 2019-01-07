@@ -35,3 +35,6 @@ Py-Tests:  um Code zu testen
 #### Bereiten Sie einen einfachen Test für den Aufruf der Random Funktion vor. Wie würden Sie diesen starten?
 @pytest.fixture  
 random Number test - pytest - asserts + setup/teardown
+#### Implementieren Sie einen einfachen grafischen Test. Worauf achten Sie dabei?
+Grafischer Test -> Cypress -> Simple Test Cypress.js
+noch nicht funktionstüchtig, (Zeit)
