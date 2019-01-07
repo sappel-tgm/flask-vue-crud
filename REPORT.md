@@ -9,3 +9,7 @@ JSON Route
 
 #### Bereiten Sie die grafische Oberfläche für eine einfache Erstellung, Anzeige, Löschung und Anpassung der TODOs vor. Welche Komponenten müssen dafür erstellt werden?
 CRUD Implementieren, Methoden erstellen
+
+#### Ermöglichen Sie die einfache Erweiterung der grafischen Oberfläche und beschreiben Sie notwendige Schritte um neue Komponenten zur Anmeldung oder persönlichen Definition von personenbezogenen TODOs zu ermöglichen.
+Erweiterung von Vue, change der Routes in js
+Neue Komponenten durch components in der View
