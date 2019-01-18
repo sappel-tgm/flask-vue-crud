@@ -36,8 +36,15 @@ Außerdem Authentifizierung mit Vue: Login functions, mit Username+Password labe
 [https://blog.sqreen.io/authentication-best-practices-vue/](Vue-Auth)  
 
 #### Implementieren Sie einen Client in Python, der sich mit der vorhandenen Server-Einheit verbindet und die Daten in eine eigene JSON Struktur lädt.
-Simple Client erstellen, Flask-Python
-
+```
+if __name__ == "__main__":
+    getInput = requests.get("http://localhost:8080/ping")
+    data = json.loads(getInput.text)
+    if data != None:
+      print(data)
+    else:
+      print("Data Null")
+```
 #### Was würden Sie bei der Server-API anders definieren, damit verschiedene Clients auf die angebotenenen Funktionen zugreifen könnten?
 --Not done--
 
