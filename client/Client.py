@@ -1,21 +1,10 @@
-import os
-import tempfile
+import requests
+import json
 
-import pytest
-
-from flaskr import flaskr
-
-
-@pytest.fixture
-def client():
-    db_fd, flaskr.app.config['DATABASE'] = tempfile.mkstemp()
-    flaskr.app.config['TESTING'] = True
-    client = flaskr.app.test_client()
-
-    with flaskr.app.app_context():
-        flaskr.init_db()
-
-    yield client
-
-    os.close(db_fd)
-    os.unlink(flaskr.app.config['DATABASE'])
+if __name__ == "__main__":
+    getInput = requests.get("http://localhost:8080/ping")
+    data = json.loads(getInput.text)
+    if data != None:
+      print(data)
+    else:
+      print("Data Null")
