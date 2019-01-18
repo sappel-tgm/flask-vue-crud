@@ -4,7 +4,17 @@
 ```app.run(host='127.0.0.1', port=80)```
 
 #### Implementieren Sie eine TODO-Liste mit Flask mit folgenden Elementen: {id, todo, assignee, done}. Was haben Sie geändert oder welche Elemente haben Sie neu definiert?
--> Books mit TODO ersetzen  
+-> Books mit Todos ersetzen  
+-> Book zu Todo  
+Nicht benötigte FUnktionen entfernen (Charge)  
+JSON Struktur umstellen auf:  
+```
+'id': uuid.uuid4().hex,
+'todo': 'On the Road2',
+'assignee': 'Jack Kerouac2',
+'done': True
+```
+
 
 #### Bereiten Sie die grafische Oberfläche für eine einfache Erstellung, Anzeige, Löschung und Anpassung der TODOs vor. Welche Komponenten müssen dafür erstellt werden?
 CRUD Implementieren, Methoden erstellen
