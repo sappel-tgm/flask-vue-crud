@@ -17,12 +17,17 @@ JSON Struktur umstellen auf:
 
 
 #### Bereiten Sie die grafische Oberfläche für eine einfache Erstellung, Anzeige, Löschung und Anpassung der TODOs vor. Welche Komponenten müssen dafür erstellt werden?
-CRUD Implementieren, Methoden erstellen
+Books.vue zu Todos.vue renamen  
+-> In JS, das neue File importieren
+Route ändern:  
+```path: '/',
+   name: 'Todos',
+   component: Todos,
+```
 
 #### Ermöglichen Sie die einfache Erweiterung der grafischen Oberfläche und beschreiben Sie notwendige Schritte um neue Komponenten zur Anmeldung oder persönlichen Definition von personenbezogenen TODOs zu ermöglichen.
-Erweiterung von Vue, change der Routes in js  
-Neue Komponenten durch components in der View
-Routes 2x Änderung + (!ID)
+Damit das möglich ist muss man nichts ändern.  
+Für personenbezogene TODO's kann man einfach nach der Zuweisung filtern.  
 
 #### Wie würden Sie eine einfache Authentifizierung implementieren? Beschreiben Sie die notwendigen Schritte!
 Authentifizierung einerseits mit Flask: Flask-HTTPAuth, Token Based Authentication  
