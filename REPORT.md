@@ -46,8 +46,9 @@ if __name__ == "__main__":
       print("Data Null")
 ```
 #### Was würden Sie bei der Server-API anders definieren, damit verschiedene Clients auf die angebotenenen Funktionen zugreifen könnten?
---Not done--
-
+Der Rest-Teil ist von überall zugänglich.  
+Jedoch braucht es ein Resource Sharing Modul (CORS), damit andere CLient Cross-Origin-Requests durchführen können.  
+[CORS](https://flask-cors.readthedocs.io/en/latest/)
 
 ### Teil 2
 #### Welche Tools würden Sie einsetzen, und wie würden die entsprechenden Konfigurationsdateien aussehen? Erstellen Sie ein Konzept!
