@@ -79,6 +79,24 @@ python_classes = Tests
 #### Bereiten Sie einen einfachen Test für den Aufruf der Random Funktion vor. Wie würden Sie diesen starten?
 @pytest.fixture  
 random Number test - pytest - asserts + setup/teardown
+
+BSP: Test des unteren Limits  
+```
+import json
+import requests
+import numpy
+
+@pytest.fixture
+def client(request):
+    url = 'localhost:8080/api/random'
+    return url
+
+def test_unteresLimit(url):
+    # Test with many Entries, if anyone is not in its range
+    arr = [getNumber(request.get(url)) for i in range(123)]
+    # check if anything is >= using np
+    assert np.min(arr) >= 1
+```
 #### Implementieren Sie einen einfachen grafischen Test. Worauf achten Sie dabei?
 Grafischer Test -> Cypress -> Simple Test Cypress.js  
 
@@ -106,3 +124,6 @@ matrix:
     - language: node_js  
     ....
 ```
+
+#### Welche Tests würden Sie für die Grenzen der Random Funktion vorsehen?
+Tests der oberen und unteren Grenzen
