@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Ping from '@/components/Ping';
-import Books from '@/components/Books';
+import Todus from '@/components/Todos';
 import Order from '@/components/Order';
 import OrderComplete from '@/components/OrderComplete';
 

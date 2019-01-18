@@ -12,19 +12,18 @@
         <table class="table table-hover">
           <thead>
             <tr>
-              <th scope="col">Title</th>
-              <th scope="col">Author</th>
-              <th scope="col">Read?</th>
-              <th scope="col">Purchase Price</th>
+              <th scope="col">Todo</th>
+              <th scope="col">assignee</th>
+              <th scope="col">Done?</th>
               <th></th>
             </tr>
           </thead>
           <tbody>
             <tr v-for="(Todo, index) in todos" :key="index">
-              <td>{{ Todo.title }}</td>
-              <td>{{ Todo.author }}</td>
+              <td>{{ Todo.todo }}</td>
+              <td>{{ Todo.assignee }}</td>
               <td>
-                <span v-if="Todo.read">Yes</span>
+                <span v-if="Todo.done">Yes</span>
                 <span v-else>No</span>
               </td>
               <td>${{ Todo.price }}</td>
@@ -63,7 +62,7 @@
                       label-for="form-title-input">
             <b-form-input id="form-title-input"
                           type="text"
-                          v-model="addTodoForm.title"
+                          v-model="addTodoForm.todo"
                           required
                           placeholder="Enter title">
             </b-form-input>
@@ -73,24 +72,14 @@
                       label-for="form-author-input">
           <b-form-input id="form-author-input"
                         type="text"
-                        v-model="addTodoForm.author"
+                        v-model="addTodoForm.assignee"
                         required
                         placeholder="Enter author">
           </b-form-input>
         </b-form-group>
-        <b-form-group id="form-price-group"
-                      label="Purchase price:"
-                      label-for="form-price-input">
-          <b-form-input id="form-price-input"
-                        type="number"
-                        v-model="addTodoForm.price"
-                        required
-                        placeholder="Enter price">
-          </b-form-input>
-        </b-form-group>
         <b-form-group id="form-read-group">
-            <b-form-checkbox-group v-model="addTodoForm.read" id="form-checks">
-              <b-form-checkbox value="true">Read?</b-form-checkbox>
+            <b-form-checkbox-group v-model="addTodoForm.done" id="form-checks">
+              <b-form-checkbox value="true">Done?</b-form-checkbox>
             </b-form-checkbox-group>
         </b-form-group>
         <b-button type="submit" variant="primary">Submit</b-button>
@@ -108,7 +97,7 @@
                       label-for="form-title-edit-input">
           <b-form-input id="form-title-edit-input"
                         type="text"
-                        v-model="editForm.title"
+                        v-model="editForm.todo"
                         required
                         placeholder="Enter title">
           </b-form-input>
@@ -118,23 +107,13 @@
                       label-for="form-author-edit-input">
           <b-form-input id="form-author-edit-input"
                         type="text"
-                        v-model="editForm.author"
+                        v-model="editForm.assignee"
                         required
                         placeholder="Enter author">
           </b-form-input>
         </b-form-group>
-        <b-form-group id="form-price-edit-group"
-                      label="Purchase price:"
-                      label-for="form-price-edit-input">
-          <b-form-input id="form-price-edit-input"
-                        type="number"
-                        v-model="editForm.price"
-                        required
-                        placeholder="Enter price">
-          </b-form-input>
-        </b-form-group>
         <b-form-group id="form-read-edit-group">
-          <b-form-checkbox-group v-model="editForm.read" id="form-checks">
+          <b-form-checkbox-group v-model="editForm.done" id="form-checks">
             <b-form-checkbox value="true">Read?</b-form-checkbox>
           </b-form-checkbox-group>
         </b-form-group>
@@ -154,17 +133,15 @@ export default {
     return {
       todos: [],
       addTodoForm: {
-        title: '',
-        author: '',
-        read: [],
-        price: '',
+        todo: '',
+        assignee: '',
+        done: [],
       },
       editForm: {
         id: '',
-        title: '',
-        author: '',
-        read: [],
-        price: '',
+        todo: '',
+        assignee: '',
+        done: [],
       },
       message: '',
       showMessage: false,
@@ -228,14 +205,13 @@ export default {
         });
     },
     initForm() {
-      this.addTodoForm.title = '';
-      this.addTodoForm.author = '';
-      this.addTodoForm.read = [];
-      this.addTodoForm.price = '';
+      this.addTodoForm.todo = '';
+      this.addTodoForm.assignee = '';
+      this.addTodoForm.done = [];
       this.editForm.id = '';
-      this.editForm.title = '';
-      this.editForm.author = '';
-      this.editForm.read = [];
+      this.editForm.todo = '';
+      this.editForm.assignee = '';
+      this.editForm.done = [];
       this.editForm.id = '';
     },
     onSubmit(evt) {
@@ -244,10 +220,9 @@ export default {
       let read = false;
       if (this.addTodoForm.read[0]) read = true;
       const payload = {
-        title: this.addTodoForm.title,
-        author: this.addTodoForm.author,
-        read, // property shorthand
-        price: this.addTodoForm.price,
+        todo: this.addTodoForm.title,
+        assignee: this.addTodoForm.author,
+        done, // property shorthand
       };
       this.addTodo(payload);
       this.initForm();
@@ -258,10 +233,9 @@ export default {
       let read = false;
       if (this.editForm.read[0]) read = true;
       const payload = {
-        title: this.editForm.title,
-        author: this.editForm.author,
-        read, // property shorthand
-        price: this.editForm.price,
+        todo: this.editForm.title,
+        assignee: this.editForm.author,
+        done, // property shorthand
       };
       this.updateTodo(payload, this.editForm.id);
     },
