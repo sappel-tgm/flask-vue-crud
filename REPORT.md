@@ -75,6 +75,17 @@ testpaths = src/Testing
 python_files = test_*.py
 python_classes = Tests
 ```
+
+#### Bereiten Sie einen einfachen Test für den Aufruf der Random Funktion vor. Wie würden Sie diesen starten?
+@pytest.fixture  
+random Number test - pytest - asserts + setup/teardown
+#### Implementieren Sie einen einfachen grafischen Test. Worauf achten Sie dabei?
+Grafischer Test -> Cypress -> Simple Test Cypress.js
+noch nicht funktionstüchtig, (Zeit)
+
+#### Definieren Sie eine Konfiguration mit TravisCI für eine kontinuierliche Integration. Was müssen Sie dabei für die Python Tests und was für die grafischen Tests vorsehen?
+Travis.yml muss alle notwendigen Schnittstellen laden.  
+
 Wichtige travis Elemente:  
 ```
 matrix:  
@@ -86,10 +97,5 @@ matrix:
       install: pip install tox-travis  
       script: tox  
     - language: node_js  
+    ....
 ```
-#### Bereiten Sie einen einfachen Test für den Aufruf der Random Funktion vor. Wie würden Sie diesen starten?
-@pytest.fixture  
-random Number test - pytest - asserts + setup/teardown
-#### Implementieren Sie einen einfachen grafischen Test. Worauf achten Sie dabei?
-Grafischer Test -> Cypress -> Simple Test Cypress.js
-noch nicht funktionstüchtig, (Zeit)
