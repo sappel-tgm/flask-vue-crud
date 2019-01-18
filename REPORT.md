@@ -80,9 +80,16 @@ python_classes = Tests
 @pytest.fixture  
 random Number test - pytest - asserts + setup/teardown
 #### Implementieren Sie einen einfachen grafischen Test. Worauf achten Sie dabei?
-Grafischer Test -> Cypress -> Simple Test Cypress.js
-noch nicht funktionstüchtig, (Zeit)
+Grafischer Test -> Cypress -> Simple Test Cypress.js  
 
+Test mittels Aufruf der Ping Seite:  
+```
+describe('Test Grafisch', function() {
+  it('Random', function() {
+    cy.visit('http://localhost:8080/ping')
+  })
+})
+```
 #### Definieren Sie eine Konfiguration mit TravisCI für eine kontinuierliche Integration. Was müssen Sie dabei für die Python Tests und was für die grafischen Tests vorsehen?
 Travis.yml muss alle notwendigen Schnittstellen laden.  
 
