@@ -1,0 +1,249 @@
+[33mcommit 2989cec9bc5242bb95b43c385772698c20d3eb57[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Simon Appel <sappel@student.tgm.ac.at>
+Date:   Mon Jan 7 09:12:20 2019 +0100
+
+    Update REPORT.md
+
+ REPORT.md | 9 [32m+++++++++[m
+ 1 file changed, 9 insertions(+)
+
+[33mcommit 0b479ea2ef1154feb07d3c949fae3e7c48e2257a[m
+Author: sappel-tgm <sappel@student.tgm.ac.at>
+Date:   Mon Jan 7 09:10:20 2019 +0100
+
+    add theo. Client
+
+ .idea/workspace.xml | 59 [32m+++++++++++++++++++++++++++++[m[31m------------------------[m
+ client/Client.py    | 21 [32m+++++++++++++++++++[m
+ 2 files changed, 53 insertions(+), 27 deletions(-)
+
+[33mcommit 344022f8d9a33da2f431da8415de27e974d73dfe[m
+Merge: 901d304 aa4a030
+Author: sappel-tgm <sappel@student.tgm.ac.at>
+Date:   Mon Jan 7 09:06:11 2019 +0100
+
+    Merge branch 'master' of https://github.com/sappel-tgm/flask-vue-crud
+
+[33mcommit aa4a0302a732e31eb1e70a104eed2fb9424ad1f4[m
+Author: Simon Appel <sappel@student.tgm.ac.at>
+Date:   Mon Jan 7 09:05:20 2019 +0100
+
+    Update REPORT.md
+
+ REPORT.md | 11 [32m++++++++[m[31m---[m
+ 1 file changed, 8 insertions(+), 3 deletions(-)
+
+[33mcommit 901d30450e9606c1488614e6c65ce93550ab53f9[m
+Author: sappel-tgm <sappel@student.tgm.ac.at>
+Date:   Mon Jan 7 08:57:16 2019 +0100
+
+    Update workspace.xml
+
+ .idea/workspace.xml | 30 [32m+++++++++++++++[m[31m---------------[m
+ 1 file changed, 15 insertions(+), 15 deletions(-)
+
+[33mcommit aa7790b2918bab06f2b885e3a5180cb497ec6d50[m
+Author: Simon Appel <sappel@student.tgm.ac.at>
+Date:   Mon Jan 7 08:54:27 2019 +0100
+
+    Update REPORT.md
+
+ REPORT.md | 4 [32m++++[m
+ 1 file changed, 4 insertions(+)
+
+[33mcommit f6e126baafda6a6b2dc2d24799dbfb2af411c9ba[m
+Author: sappel-tgm <sappel@student.tgm.ac.at>
+Date:   Mon Jan 7 08:52:25 2019 +0100
+
+    change vue router
+
+ .idea/workspace.xml             | 120 [32m+++++++++++++++++++++++++++++++++++[m[31m---[m
+ client/src/components/Books.vue | 124 [32m++++++++++++++++++++[m[31m--------------------[m
+ client/src/router/index.js      |   4 [32m+[m[31m-[m
+ 3 files changed, 177 insertions(+), 71 deletions(-)
+
+[33mcommit adc0ae43356497b9454f032c25aac8753d949850[m
+Merge: 8eff536 86454d0
+Author: sappel-tgm <sappel@student.tgm.ac.at>
+Date:   Mon Jan 7 08:47:51 2019 +0100
+
+    Merge branch 'master' of https://github.com/sappel-tgm/flask-vue-crud
+
+[33mcommit 8eff5361c560fd47205ab408f66fe42c404a6afd[m
+Author: sappel-tgm <sappel@student.tgm.ac.at>
+Date:   Mon Jan 7 08:47:27 2019 +0100
+
+    replace book with todo
+
+ .idea/workspace.xml | 15 [32m+++++++++++[m[31m----[m
+ server/app.py       | 48 [32m++++++++++++++++++++++++[m[31m------------------------[m
+ 2 files changed, 35 insertions(+), 28 deletions(-)
+
+[33mcommit 86454d0eb1b34f66a17a0acf30a3d566048ddcb8[m
+Author: Simon Appel <sappel@student.tgm.ac.at>
+Date:   Mon Jan 7 08:42:07 2019 +0100
+
+    Update REPORT.md
+
+ REPORT.md | 3 [32m+++[m
+ 1 file changed, 3 insertions(+)
+
+[33mcommit 8c1a186d2cbb050a06e44dbdc00cf5d3e3540282[m
+Merge: a55331c f6eb40d
+Author: sappel-tgm <sappel@student.tgm.ac.at>
+Date:   Mon Jan 7 08:40:08 2019 +0100
+
+    Merge branch 'master' of https://github.com/sappel-tgm/flask-vue-crud
+
+[33mcommit f6eb40df8268103bf31dcec7e9e5171dc6f70e66[m
+Author: Simon Appel <sappel@student.tgm.ac.at>
+Date:   Mon Jan 7 08:39:20 2019 +0100
+
+    Update REPORT.md
+
+ REPORT.md | 4 [32m++++[m
+ 1 file changed, 4 insertions(+)
+
+[33mcommit a55331c3f00ae8fa054156418d50ed01ef2eaa8f[m
+Author: sappel-tgm <sappel@student.tgm.ac.at>
+Date:   Mon Jan 7 08:38:52 2019 +0100
+
+    create todo route
+
+ .idea/workspace.xml |  9 [32m++++[m[31m-----[m
+ server/app.py       | 21 [32m+++++++++[m[31m------------[m
+ 2 files changed, 13 insertions(+), 17 deletions(-)
+
+[33mcommit 56ee4b81d7343ba4f242f6abe15dd5a70b8408f4[m
+Author: Simon Appel <sappel@student.tgm.ac.at>
+Date:   Mon Jan 7 08:35:11 2019 +0100
+
+    1.1 finish
+
+ REPORT.md | 3 [32m+++[m
+ 1 file changed, 3 insertions(+)
+
+[33mcommit 8dbbcfbd14fbc886a17f19025c72148728f15b41[m
+Author: sappel-tgm <sappel@student.tgm.ac.at>
+Date:   Mon Jan 7 08:34:08 2019 +0100
+
+    Port 8080
+
+ .idea/flask-vue-crud.iml |  12 [32m++++[m
+ .idea/modules.xml        |   8 [32m+++[m
+ .idea/vcs.xml            |   6 [32m++[m
+ .idea/workspace.xml      | 170 [32m+++++++++++++++++++++++++++++++++++++++++++++++[m
+ server/app.py            |   2 [32m+[m[31m-[m
+ 5 files changed, 197 insertions(+), 1 deletion(-)
+
+[33mcommit 6750fa765691b91ac365c83c31ae9b62bd5b8b3c[m
+Author: Simon Appel <sappel@student.tgm.ac.at>
+Date:   Mon Jan 7 08:30:24 2019 +0100
+
+    Create REPORT.md
+
+ REPORT.md | 1 [32m+[m
+ 1 file changed, 1 insertion(+)
+
+[33mcommit 4b122047acb56c7fd441dbcc61c1b6bd10467eba[m[33m ([m[1;31mupstream/master[m[33m)[m
+Merge: 6793022 7f9fa9b
+Author: Michael Herman <hermanmu@gmail.com>
+Date:   Mon Aug 13 07:32:24 2018 -0600
+
+    Merge pull request #3 from testdrivenio/add-license-1
+    
+    Create LICENSE
+
+[33mcommit 7f9fa9bd8c28c81dc89f3081746da47a98405632[m
+Author: Michael Herman <hermanmu@gmail.com>
+Date:   Mon Aug 13 07:32:03 2018 -0600
+
+    Create LICENSE
+
+ LICENSE | 21 [32m+++++++++++++++++++++[m
+ 1 file changed, 21 insertions(+)
+
+[33mcommit 6793022a2e2b278fd3e460a4d9f75fecbe6d4040[m
+Author: Michael Herman <hermanmu@gmail.com>
+Date:   Mon Jun 11 06:55:33 2018 -0600
+
+    added v2
+
+ README.md                               |  30 [32m++++[m[31m--[m
+ client/index.html                       |   3 [32m+[m[31m-[m
+ client/src/components/Books.vue         | 108 [32m++++++++++++++[m[31m-------[m
+ client/src/components/Order.vue         | 161 [32m++++++++++++++++++++++++++++++++[m
+ client/src/components/OrderComplete.vue |  39 [32m++++++++[m
+ client/src/router/index.js              |  12 [32m+++[m
+ server/app.py                           |  54 [32m+++++++++[m[31m--[m
+ server/requirements.txt                 |   1 [32m+[m
+ 8 files changed, 357 insertions(+), 51 deletions(-)
+
+[33mcommit 577c4bf905d598eb5f82c796a718f436a7ffc0b4[m[33m ([m[1;33mtag: v1[m[33m)[m
+Author: Michael Herman <hermanmu@gmail.com>
+Date:   Sat Jun 9 11:35:19 2018 -0600
+
+    refactored duplicate id
+
+ client/src/components/Books.vue | 14 [32m+++++++[m[31m-------[m
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+[33mcommit 07453066641aa0d8e454f2f1984602f32beb57d1[m
+Author: Michael Herman <hermanmu@gmail.com>
+Date:   Thu Jun 7 07:30:38 2018 -0600
+
+    updates to the gitignore and readme, minor code changes to the Books component
+
+ .gitignore                      | 1 [32m+[m
+ README.md                       | 3 [32m++[m[31m-[m
+ client/src/components/Books.vue | 4 [32m++[m[31m--[m
+ 3 files changed, 5 insertions(+), 3 deletions(-)
+
+[33mcommit 97891679298f43a7edd0c90fd0cbee44d192dff6[m
+Author: Michael Herman <hermanmu@gmail.com>
+Date:   Tue May 29 07:21:36 2018 -0600
+
+    updated readme
+
+ README.md | 6 [32m+++[m[31m---[m
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+[33mcommit 1f4d890da47b80abfc4d0dfc950fc40d9d924f9a[m
+Author: Michael Herman <hermanmu@gmail.com>
+Date:   Sat May 26 18:25:36 2018 -0600
+
+    init
+
+ .gitignore                           |   4 [32m+[m
+ README.md                            |  30 [32m+++++[m
+ client/.babelrc                      |  12 [32m++[m
+ client/.editorconfig                 |   9 [32m++[m
+ client/.eslintignore                 |   4 [32m+[m
+ client/.eslintrc.js                  |  50 [32m+++++++[m
+ client/.postcssrc.js                 |  10 [32m++[m
+ client/README.md                     |  21 [32m+++[m
+ client/build/build.js                |  41 [32m++++++[m
+ client/build/check-versions.js       |  54 [32m++++++++[m
+ client/build/logo.png                | Bin [31m0[m -> [32m6849[m bytes
+ client/build/utils.js                | 101 [32m++++++++++++++[m
+ client/build/vue-loader.conf.js      |  22 [32m+++[m
+ client/build/webpack.base.conf.js    |  92 [32m+++++++++++++[m
+ client/build/webpack.dev.conf.js     |  95 [32m+++++++++++++[m
+ client/build/webpack.prod.conf.js    | 145 [32m++++++++++++++++++++[m
+ client/config/dev.env.js             |   7 [32m+[m
+ client/config/index.js               |  76 [32m+++++++++++[m
+ client/config/prod.env.js            |   4 [32m+[m
+ client/index.html                    |  12 [32m++[m
+ client/package.json                  |  74 [32m++++++++++[m
+ client/src/App.vue                   |  17 [32m+++[m
+ client/src/assets/logo.png           | Bin [31m0[m -> [32m6849[m bytes
+ client/src/components/Alert.vue      |  12 [32m++[m
+ client/src/components/Books.vue      | 254 [32m+++++++++++++++++++++++++++++++++++[m
+ client/src/components/HelloWorld.vue | 113 [32m++++++++++++++++[m
+ client/src/components/Ping.vue       |  34 [32m+++++[m
+ client/src/main.js                   |  17 [32m+++[m
+ client/src/router/index.js           |  22 [32m+++[m
+ client/static/.gitkeep               |   0
+ server/app.py                        |  90 [32m+++++++++++++[m
+ server/requirements.txt              |   2 [32m+[m
+ 32 files changed, 1424 insertions(+)
